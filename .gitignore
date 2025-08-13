@@ -31,3 +31,9 @@
 /exports
 
 
+
+
+# Sanity Functions
+functions/**/.env*
+functions/**/.build/
+functions/**/node_modules/
