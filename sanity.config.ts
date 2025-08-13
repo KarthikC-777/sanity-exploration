@@ -1,18 +1,36 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import { visionTool } from '@sanity/vision'
+import { defineConfig } from 'sanity'
+import { structureTool } from 'sanity/structure'
+import { schemaTypes } from './schemaTypes'
 
-export default defineConfig({
-  name: 'default',
-  title: 'sanity-crash-course-experiment',
 
-  projectId: 'o8qrhdis',
-  dataset: 'development',
+export default defineConfig([
+  {
+    name: 'development',
+    title: 'Development',
 
-  plugins: [structureTool(), visionTool()],
+    projectId: 'o8qrhdis',
+    dataset: 'development',
 
-  schema: {
-    types: schemaTypes,
+    plugins: [structureTool(), visionTool(),  ],
+
+    schema: {
+      types: schemaTypes,
+    },
+    basePath: '/develop'
   },
-})
+  {
+    name: 'production',
+    title: 'Production',
+
+    projectId: 'o8qrhdis',
+    dataset: 'production',
+
+    plugins: [structureTool(), visionTool()],
+
+    schema: {
+      types: schemaTypes,
+    },
+    basePath: '/production'
+  },
+])
