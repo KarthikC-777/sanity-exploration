@@ -7,10 +7,6 @@ export default defineCliConfig({
   },
     graphql: [
       {
-        id: "production",
-        workspace: "production",
-      },
-      {
         id: "develop",
         workspace: "develop",
       }

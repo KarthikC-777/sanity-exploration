@@ -4,7 +4,7 @@ import { structureTool } from 'sanity/structure'
 import { schemaTypes } from './schemaTypes'
 
 
-export default defineConfig([
+export default defineConfig(
   {
     name: 'development',
     title: 'Development',
@@ -18,19 +18,5 @@ export default defineConfig([
       types: schemaTypes,
     },
     basePath: '/develop'
-  },
-  {
-    name: 'production',
-    title: 'Production',
-
-    projectId: 'o8qrhdis',
-    dataset: 'production',
-
-    plugins: [structureTool(), visionTool()],
-
-    schema: {
-      types: schemaTypes,
-    },
-    basePath: '/production'
-  },
-])
+  }
+)
