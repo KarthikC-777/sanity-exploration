@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "sanity-v3",
-  "buildCommand": "sanity build && sanity schema deploy --manifest-dir ./dist/static"
+  "buildCommand": "sanity build && sanity schema deploy --workspace development --manifest-dir ./dist/static && sanity schema deploy --workspace production --manifest-dir ./dist/static"
 }
